@@ -6,15 +6,17 @@ An audispd plugin outputting human-readable logs of program executions running o
 Installation
 ============
 
-1.        gcc -o exemon exemon.c -lauparse
+1.       gcc -o exemon exemon.c -lauparse
 2.   Put your exemon wherever you want it (but it must be chmod 0750
      and owned by root) and add this to your /etc/audisp/plugins.d/exemon.conf:
+
          active = yes
 	 direction = out
 	 path = <path_to_exemon>
 	 type = always
 	 format = string
 3.   Add the following to /etc/audit/auditctl.conf (append it to the very end):
+
          -a exit,always -F arch=b32 -S 11
 	 -a exit,always -F arch=b64 -S 59
 	 
