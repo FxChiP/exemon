@@ -11,14 +11,14 @@ Installation
      and owned by root) and add this to your /etc/audisp/plugins.d/exemon.conf:
 
          active = yes
-	 direction = out
-	 path = <path_to_exemon>
-	 type = always
-	 format = string
+         direction = out
+         path = <path_to_exemon>
+         type = always
+         format = string
 3.   Add the following to /etc/audit/auditctl.conf (append it to the very end):
 
          -a exit,always -F arch=b32 -S 11
-	 -a exit,always -F arch=b64 -S 59
+         -a exit,always -F arch=b64 -S 59
 	 
      You can also use the word "execve" rather than the number here. 
 
