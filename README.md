@@ -15,7 +15,7 @@ Installation
          path = <path_to_exemon>
          type = always
          format = string
-3.   Add the following to /etc/audit/auditctl.conf (append it to the very end):
+3.   Add the following to /etc/audit/audit.rules (append it to the very end):
 
          -a exit,always -F arch=b32 -S 11
          -a exit,always -F arch=b64 -S 59
