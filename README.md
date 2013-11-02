@@ -31,6 +31,8 @@ You might also want to change disp_qos in /etc/audit/auditd.conf to "lossless".
 Mostly because strange things can happen on the off-chance the plugin takes
 too long. 
 
+Generated logs can be found in /tmp/exemon.log -- however, you might want to
+change this. In the future I'll be updating that to use syslog. 
 
 Known Issues
 ============
